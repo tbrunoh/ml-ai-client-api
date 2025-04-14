@@ -16,6 +16,11 @@ jobs:
         with:
           ssh-key: ${{ secrets.SSH_KEY }}
 
+      - name: Set up SSH Agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
       - name: Log in to Azure
         uses: azure/login@v1
         with:
