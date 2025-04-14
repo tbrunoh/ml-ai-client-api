@@ -4,13 +4,17 @@ from ts.torch_handler.base_handler import BaseHandler
 import torchvision.transforms as transforms
 from PIL import Image
 import io
-from mlai
+from mlaist.models.model import SkinToneCNNModel 
+from mlaicore.utils.utils import Utils
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 class SkinToneHandler(BaseHandler):
     def initialize(self, context):
         """Initialize the model and other artifacts."""
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        model_dir = context.system_properties.get("model_dir")
-        model_path = f"{model_dir}/skin_tone_model.pth"
+        self.device = Utils.set_accelerator()
+        model_path = os.getenv("SKINTONE_MODEL_PATH")
         
         # Load the model
         self.model = SkinToneCNNModel(num_classes=10, image_size=512, channels=3)
