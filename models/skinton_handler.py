@@ -1,10 +1,10 @@
 import torch
 from ts.torch_handler.base_handler import BaseHandler
-from models.model import SkinToneCNNModel
+
 import torchvision.transforms as transforms
 from PIL import Image
 import io
-
+from mlai
 class SkinToneHandler(BaseHandler):
     def initialize(self, context):
         """Initialize the model and other artifacts."""
