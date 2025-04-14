@@ -26,8 +26,10 @@ jobs:
           az acr login --name ${{ secrets.ACR_NAME }}
 
       - name: Build and Tag Docker Image
+        env:
+          DOCKER_BUILDKIT: 1  # Enable BuildKit
         run: |
-          docker build -t ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_PREFIX }}:${{ github.sha }} .
+          docker build --ssh default -t ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_PREFIX }}:${{ github.sha }} .
 
       - name: Push Docker Image to ACR
         run: |
