@@ -1,4 +1,3 @@
-# filepath: /Users/nkigen/sources/work/siliconmara/ml-ai-client-api/Dockerfile
 # syntax=docker/dockerfile:1.4
 FROM python:3.12-slim
 
@@ -10,6 +9,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-client \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Add GitHub to known_hosts to avoid host key verification issues
+RUN mkdir -p /root/.ssh && ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 # Use BuildKit to mount the SSH key for private repository access
 COPY Requirements.txt .
