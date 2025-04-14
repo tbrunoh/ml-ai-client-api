@@ -5,3 +5,4 @@ class SkinToneRequest(BaseModel):
 class SkinToneResponse(BaseModel):
     number: int
     name: str
+    orb: str

@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from models.api_models import SkinToneResponse,SkinToneRequest
 from mlaist.inference import classify_image
 
+
 router = APIRouter(
     prefix="/skintone",
     tags=["skintone"]
