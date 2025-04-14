@@ -21,6 +21,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
+      - name: Install SSH Client
+        run: |
+          sudo apt-get update && sudo apt-get install -y openssh-client
+
       - name: Log in to Azure
         uses: azure/login@v1
         with:
