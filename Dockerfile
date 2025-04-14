@@ -3,7 +3,7 @@ FROM python:3.12-slim
 WORKDIR /prep
 
 COPY Requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r Requirements.txt
 
 COPY app/ app/
 COPY models/ models/
