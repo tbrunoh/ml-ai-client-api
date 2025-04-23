@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List
 from fastapi import APIRouter, UploadFile, File
 
 import mlaicore.azure_storage as storage
