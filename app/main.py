@@ -22,8 +22,8 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Melanin Luxe Inference API",
-    description="Melanin Luxe Inference API",
+    title="Melanin Luxe Client API",
+    description="Melanin Luxe Client API",
     version="1.0.0",
 )
 
@@ -31,7 +31,7 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:4200",
-    "https://ml-ai-st-ui-a3chcug0c6g9a5b6.centralus-01.azurewebsites.net",  # Add your Next.js app's domain here
+    "https://ml-ai-st-ui-a3chcug0c6g9a5b6.centralus-01.azurewebsites.net",
 
 ]
 
