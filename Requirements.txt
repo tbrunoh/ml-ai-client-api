@@ -7,13 +7,11 @@ cachetools==5.5.2
 certifi==2025.1.31
 cffi==1.17.1
 charset-normalizer==3.4.1
-click==8.1.8
 contourpy==1.3.1
 cryptography==44.0.2
 cycler==0.12.1
 docstring_parser==0.16
 dotenv==0.9.9
-enum-compat==0.0.3
 fastapi==0.115.12
 filelock==3.18.0
 fonttools==4.56.0
@@ -32,7 +30,6 @@ googleapis-common-protos==1.69.2
 grpc-google-iam-v1==0.14.2
 grpcio==1.72.0rc1
 grpcio-status==1.71.0
-h11==0.14.0
 idna==3.10
 isodate==0.7.2
 Jinja2==3.1.6
@@ -40,7 +37,7 @@ kiwisolver==1.4.8
 MarkupSafe==3.0.2
 matplotlib==3.10.1
 mlaicore @ git+ssh://git@github.com/melanin-luxe/ml-ai-core.git@72697346e26554ca30a7e8e09ec066c3bf0e8637
-mlaist @ git+ssh://git@github.com/melanin-luxe/ml-ai-skintone.git@19852204829136f90375b869176fcbcf0119a235
+mlaist @ git+ssh://git@github.com/melanin-luxe/ml-ai-skintone.git@deb909057fdeace54ca683e11f1b54692f9cf635
 mpmath==1.3.0
 networkx==3.4.2
 numpy==2.2.4
@@ -50,7 +47,6 @@ pandas==2.2.3
 pillow==11.1.0
 proto-plus==1.26.1
 protobuf==5.29.4
-psutil==7.0.0
 pyacrcloud==1.0.8
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
@@ -70,12 +66,8 @@ sniffio==1.3.1
 starlette==0.46.2
 sympy==1.13.1
 torch==2.6.0
-torch-model-archiver==0.12.0
-torchserve==0.12.0
 torchvision==0.21.0
 typing-inspection==0.4.0
 typing_extensions==4.13.0
 tzdata==2025.2
 urllib3==2.4.0
-uvicorn==0.34.1
-wheel==0.45.1

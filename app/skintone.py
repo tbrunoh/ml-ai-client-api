@@ -1,9 +1,8 @@
 from typing import List, Optional
 
 from fastapi import APIRouter
-from pydantic import BaseModel
 
-from models.api_models import SkinToneResponse,SkinToneRequest
+from models.skintone_models import SkinToneResponse,SkinToneRequest
 from mlaist.inference import classify_image
 
 
