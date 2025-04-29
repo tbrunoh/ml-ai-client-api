@@ -18,7 +18,6 @@ COPY Requirements.txt .
 RUN --mount=type=ssh pip3 install --no-cache-dir -r Requirements.txt
 
 COPY app/ app/
-COPY models/ models/
 COPY model_store/ model_store/
 COPY ai_models/ ai_models/
 COPY output/ output/
