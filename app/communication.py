@@ -1,9 +1,6 @@
 from typing import List, Optional
 
 from fastapi import APIRouter
-from pydantic import BaseModel
-
-from app.models.skintone_models import SkinToneResponse,SkinToneRequest
 from app.models.communication_models import SendEmailModel
 from app.services.communication_service import EmailService
 

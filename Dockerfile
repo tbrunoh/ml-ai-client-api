@@ -24,4 +24,4 @@ COPY ai_models/ ai_models/
 COPY output/ output/
 COPY .env .env
 
-CMD ["python3", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["python3.13", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
