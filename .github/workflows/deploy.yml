@@ -39,7 +39,13 @@ jobs:
           DOCKER_BUILDKIT: 1  # Enable BuildKit
         run: |
           docker build --ssh default -t ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_PREFIX }}:${{ github.sha }} .
-
+      - name: Test Docker Image Locally
+        run: |
+          docker run --rm -d --name test-container -p 80:80 ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_PREFIX }}:${{ github.sha }}
+          sleep 10
+          curl -f http://localhost:80 || (docker logs test-container && docker stop test-container && exit 1)
+          docker stop test-container
+    
       - name: Push Docker Image to ACR
         run: |
           docker push ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_PREFIX }}:${{ github.sha }}

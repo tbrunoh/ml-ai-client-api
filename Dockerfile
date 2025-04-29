@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1.4
 FROM python:3.12-slim
 
+EXPOSE 80
 WORKDIR /prep
 
 # Install git, SSH client, and other dependencies
