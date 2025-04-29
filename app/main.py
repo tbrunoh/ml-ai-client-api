@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import app.api as api
 # import app.upload as upload
 import app.skintone as skintone
+import app.communication as communication
 
 # Configure logging
 logging.basicConfig(
@@ -48,6 +49,8 @@ app.add_middleware(
 app.include_router(api.router)
 # app.include_router(upload.app)
 app.include_router(skintone.router)
+app.include_router(communication.router)
+
 
 @app.get("/health", include_in_schema=False)
 def health():

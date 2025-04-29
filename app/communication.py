@@ -9,11 +9,11 @@ from app.services.communication_service import EmailService
 
 router = APIRouter(
     prefix="/communication",
-    tags=["skintone"]
+    tags=["communication"]
 )
 
 
-@router.post('/email')
+@router.post('/email/')
 def generic_image(request: SendEmailModel):
     email = EmailService()
     try:
