@@ -3,6 +3,8 @@ from azure.identity import DefaultAzureCredential
 from app.models.communication_models import SendEmailModel  # Assuming SendEmailModel is in the same directory
 from dotenv import load_dotenv
 import os
+from typing import Any
+
 
 load_dotenv()
 
@@ -27,7 +29,7 @@ class EmailService:
         else:
             raise ValueError("Either connection_string or endpoint must be provided.")
 
-    def send_email(self, email_model: SendEmailModel) -> str:
+    def send_email(self, email_model: SendEmailModel) -> Any:
         """
         Sends an email using Azure Communication Services.
 
