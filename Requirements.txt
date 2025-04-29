@@ -1,12 +1,18 @@
 acrcloud==14.10.2020
 annotated-types==0.7.0
 anyio==4.9.0
+azure-common==1.1.28
+azure-communication-email==1.0.0
+azure-communication-identity==1.5.0
 azure-core==1.33.0
+azure-identity==1.21.0
+azure-mgmt-core==1.5.0
 azure-storage-blob==12.25.1
 cachetools==5.5.2
 certifi==2025.1.31
 cffi==1.17.1
 charset-normalizer==3.4.1
+click==8.1.8
 contourpy==1.3.1
 cryptography==44.0.2
 cycler==0.12.1
@@ -30,6 +36,7 @@ googleapis-common-protos==1.69.2
 grpc-google-iam-v1==0.14.2
 grpcio==1.72.0rc1
 grpcio-status==1.71.0
+h11==0.16.0
 idna==3.10
 isodate==0.7.2
 Jinja2==3.1.6
@@ -39,8 +46,12 @@ matplotlib==3.10.1
 mlaicore @ git+ssh://git@github.com/melanin-luxe/ml-ai-core.git@72697346e26554ca30a7e8e09ec066c3bf0e8637
 mlaist @ git+ssh://git@github.com/melanin-luxe/ml-ai-skintone.git@deb909057fdeace54ca683e11f1b54692f9cf635
 mpmath==1.3.0
+msal==1.32.3
+msal-extensions==1.3.1
+msrest==0.7.1
 networkx==3.4.2
 numpy==2.2.4
+oauthlib==3.2.2
 opencv-python==4.11.0.86
 packaging==24.2
 pandas==2.2.3
@@ -53,11 +64,13 @@ pyasn1_modules==0.4.2
 pycparser==2.22
 pydantic==2.11.3
 pydantic_core==2.33.1
+PyJWT==2.10.1
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 pytz==2025.2
 requests==2.32.3
+requests-oauthlib==2.0.0
 rsa==4.9
 setuptools==78.1.0
 shapely==2.1.0
@@ -71,3 +84,4 @@ typing-inspection==0.4.0
 typing_extensions==4.13.0
 tzdata==2025.2
 urllib3==2.4.0
+uvicorn==0.34.2
