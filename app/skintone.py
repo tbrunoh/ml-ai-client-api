@@ -2,7 +2,7 @@ from typing import List, Optional
 
 from fastapi import APIRouter
 
-from models.skintone_models import SkinToneResponse,SkinToneRequest
+from app.models.skintone_models import SkinToneResponse,SkinToneRequest
 from mlaist.inference import classify_image
 
 
