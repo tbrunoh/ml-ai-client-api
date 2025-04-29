@@ -56,6 +56,6 @@ class EmailService:
             # Send the email
             poller = self.client.begin_send(message)
             result = poller.result()
-            return result.message_id  # Return the message ID of the sent email
+            return result  # Return the message ID of the sent email
         except Exception as e:
             raise Exception(f"Error sending email: {e}")
