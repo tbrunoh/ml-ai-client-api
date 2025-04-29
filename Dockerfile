@@ -18,10 +18,13 @@ RUN mkdir -p /root/.ssh && ssh-keyscan github.com >> /root/.ssh/known_hosts
 COPY Requirements.txt .
 RUN --mount=type=ssh pip3 install --no-cache-dir -r Requirements.txt
 
+# Install uvicorn systemwide
+RUN pip3 install --no-cache-dir uvicorn
+
 COPY app/ app/
 COPY model_store/ model_store/
 COPY ai_models/ ai_models/
 COPY output/ output/
 COPY .env .env
 
-CMD ["python3.13", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["python3", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
