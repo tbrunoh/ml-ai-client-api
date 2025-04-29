@@ -12,7 +12,7 @@ router = APIRouter(
 )
 
 
-@router.post('/inferance', response_model=SkinToneResponse)
+@router.post('/inference', response_model=SkinToneResponse)
 def inference(request: SkinToneRequest):
     response = classify_image(request.url)
     return response
