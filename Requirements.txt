@@ -43,8 +43,8 @@ Jinja2==3.1.6
 kiwisolver==1.4.8
 MarkupSafe==3.0.2
 matplotlib==3.10.1
-mlaicore @ git+ssh://git@github.com/melanin-luxe/ml-ai-core.git@72697346e26554ca30a7e8e09ec066c3bf0e8637
-mlaist @ git+ssh://git@github.com/melanin-luxe/ml-ai-skintone.git@deb909057fdeace54ca683e11f1b54692f9cf635
+mlaicore @ git+https://github.com/tbrunoh/ml-ai-core.git@72697346e26554ca30a7e8e09ec066c3bf0e8637
+mlaist @ git+https://github.com/tbrunoh/ml-ai-skintone.git@deb909057fdeace54ca683e11f1b54692f9cf635
 mpmath==1.3.0
 msal==1.32.3
 msal-extensions==1.3.1
