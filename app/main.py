@@ -25,8 +25,8 @@ logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Melanin Luxe Client API",
-    description="Melanin Luxe Client API",
+    title="Inclusive Skin AI Client API",
+    description="Inclusive Skin AI Client API",
     version="1.0.0",
 )
 
